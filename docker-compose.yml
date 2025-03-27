@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  train:
+    build:
+      context: .
+    container_name: train_model
+    command: python train_pipeline.py
+    volumes:
+      - ./dataset.csv:/app/dataset.csv
+      - ./results:/app/results
+
+  api:
+    build:
+      context: .
+    container_name: api_inference
+    command: uvicorn inference:app --host 0.0.0.0 --port 8000
+    volumes:
+      - ./results:/app/results
+    ports:
+      - "8000:8000"
