@@ -45,4 +45,4 @@ Le projet est structuré autour de plusieurs composants clés :
 
 1. Clonez ce repository :
    ```bash
-   git clone https://github.com/<votre-utilisateur>/projectfinal_mlops.git
+   git clone https://github.com/diarrag05/projectfinal_mlops/blob/main/README.md
